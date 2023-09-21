@@ -2,12 +2,14 @@ import React from "react";
 
 interface IHeaderProps {
   title: string;
+  headerClass: string;
+  titleClass: string;
 }
 
-const Header = ({ title } : IHeaderProps) => {
+const Header = ({ title, headerClass, titleClass } : IHeaderProps) => {
   return (
-    <header>
-      <h1>{ title }</h1>
+    <header className={headerClass}>
+      <h1 className={titleClass}>{ title }</h1>
     </header>
   );
 }

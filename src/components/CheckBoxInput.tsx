@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 
 interface ICheckBoxInputProps {
   label: string;
@@ -17,6 +17,13 @@ const CheckBoxInput = ({
   inputClass,
   containerClass
 } : ICheckBoxInputProps) => {
+  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const isChecked = event.target.checked;
+    if (onChange) {
+      onChange(isChecked);
+    }
+  };
+
   return (
     <label className={containerClass}>
       <input
@@ -24,7 +31,7 @@ const CheckBoxInput = ({
         name={name}
         checked={checked}
         className={inputClass}
-        onChange={({ target: { checked } }) => onChange(checked)}
+        onChange={handleCheckboxChange}
       />
       {label}
     </label>

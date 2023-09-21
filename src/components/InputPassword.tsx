@@ -7,6 +7,7 @@ interface IPasswordInputProps {
   name: string;
   inputClass?: string;
   containerClass?: string;
+  placeholder: string;
 
   onChange: (newValue: string) => void;
 }
@@ -16,7 +17,8 @@ const PassworInput = ({
   onChange,
   value,
   inputClass,
-  containerClass
+  containerClass,
+  placeholder
 } : IPasswordInputProps) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -28,6 +30,7 @@ const PassworInput = ({
         value={value}
         onChange={ ({ target: { value } }) => onChange(value) }
         className={inputClass}
+        placeholder={placeholder}
       />
       <button
         type="button"
