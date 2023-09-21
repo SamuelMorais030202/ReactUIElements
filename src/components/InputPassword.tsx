@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import '../styles/InputPasswordStyle.css';
 
 interface IPasswordInputProps {
   value: string;
@@ -22,13 +21,13 @@ const PassworInput = ({
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (
-    <div className={`custom-container ${containerClass || ''}`}>
+    <div className={containerClass}>
       <input
         type={showPassword ? "text" : "password"}
         name={name}
         value={value}
         onChange={ ({ target: { value } }) => onChange(value) }
-        className={`custom-input ${inputClass || ""}`}
+        className={inputClass}
       />
       <button
         type="button"
