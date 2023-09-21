@@ -2,8 +2,8 @@ import React from "react";
 
 interface IHeaderProps {
   title: string;
-  headerClass: string;
-  titleClass: string;
+  headerClass?: string;
+  titleClass?: string;
 }
 
 const Header = ({ title, headerClass, titleClass } : IHeaderProps) => {
