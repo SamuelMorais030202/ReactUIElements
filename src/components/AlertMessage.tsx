@@ -19,6 +19,7 @@ const AlertMessage = ({
   buttonClass,
   autoCloseTimeout = 0
 } : IAlertMessageProps) => {
+  //@ts-ignore
   useEffect(() => {
     if (autoCloseTimeout > 0 && isVisible) {
       const timer = setTimeout(() => {
