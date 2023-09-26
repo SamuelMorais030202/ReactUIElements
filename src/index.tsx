@@ -15,4 +15,4 @@ export { default as Table } from './components/Table';
 export { default as NavBar } from './components/NavBar';
 export { default as BarChart } from './components/BarChart';
 export { default as ProductCard } from './components/ProductCard';
-export { default as Loader } from './components/Loader/Loader';
+export { default as Loader } from './components/Loader';
