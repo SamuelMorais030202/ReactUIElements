@@ -4,7 +4,7 @@ export default {
   plugins: [
     postcss({
       extract: true,
-      modules: true,
+      modules: true,  
     }),
   ],
 };
